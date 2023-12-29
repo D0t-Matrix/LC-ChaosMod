@@ -1,6 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaosMod", "ChaosMod\ChaosMod.csproj", "{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CF06D108-6DF7-49C9-9C1E-10F88E645A91}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC-ChaosMod", "LC-ChaosMod\LC-ChaosMod.csproj", "{1E5CA62A-9555-4FF5-849C-1BA779A3F6CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +17,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DC60A9D-F44B-4B06-8A37-9B05D6D2CAC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5CA62A-9555-4FF5-849C-1BA779A3F6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5CA62A-9555-4FF5-849C-1BA779A3F6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5CA62A-9555-4FF5-849C-1BA779A3F6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5CA62A-9555-4FF5-849C-1BA779A3F6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0ECDF1F9-AE30-4225-9D5E-6857B15435B6}
 	EndGlobalSection
 EndGlobal

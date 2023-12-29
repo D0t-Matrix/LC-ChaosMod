@@ -8,10 +8,10 @@ namespace LC_ChaosMod
     public class Plugin : BaseUnityPlugin
     {
         public static bool loaded;
-        public static ManualLogSource LogSource;
+        public static ManualLogSource? LogSource;
         private readonly Harmony _harmony = new(MyPluginInfo.PLUGIN_GUID);
 
-
+        //! Plugin startup logic
         public void Awake()
         {
             LogSource = BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_NAME);

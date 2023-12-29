@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		NuGet.Config = NuGet.Config
+		SetupProject.py = SetupProject.py
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LC-ChaosMod", "LC-ChaosMod\LC-ChaosMod.csproj", "{1E5CA62A-9555-4FF5-849C-1BA779A3F6CC}"

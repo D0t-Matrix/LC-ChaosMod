@@ -1,15 +1,31 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <OutputType>Library</OutputType>
+    <LangVersion>9.0</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>net46</TargetFramework>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <LangVersion>latest</LangVersion>
-    <RestoreAdditionalProjectSources>
-      https://api.nuget.org/v3/index.json;
-      https://nuget.bepinex.dev/v3/index.json;
-      https://nuget.samboy.dev/v3/index.json
-    </RestoreAdditionalProjectSources>
-	<RootNamespace>LC_ChaosMod</RootNamespace>
+    <Title>Lethal Company Chaos Mod</Title>
+    <Authors>Dot Matrix, Scorpianman42</Authors>
+    <Description>A WIP mod to introduce some *spice* to your game.</Description>
+    <Copyright>Copyright ©  2023</Copyright>
+    <PackageProjectUrl>https://github.com/D0t-Matrix/LC-ChaosMod/</PackageProjectUrl>
+    <PackageTags>lethal company, BepInEx, chaos</PackageTags>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GamePath>D:\SteamLibrary\steamapps\common\Lethal Company</GamePath>
+
+    <BepInExCorePath>$(GamePath)\BepInEx\core</BepInExCorePath>
+    <ManagedPath>$(GamePath)\Lethal Company_Data\Managed</ManagedPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +33,7 @@
     <PackageReference Include="BepInEx.Core" Version="5.*" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
     <PackageReference Include="UnityEngine.Modules" Version="2022.3.9" IncludeAssets="compile" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
@@ -25,13 +42,13 @@
   
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>D:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(ManagedPath)\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
-      <HintPath>D:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\netstandard.dll</HintPath>
+      <HintPath>$(ManagedPath)\netstandard.dll</HintPath>
 	</Reference>
     <Reference Include="Unity.Netcode.Runtime">
-      <HintPath>D:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.Netcode.Runtime.dll</HintPath>
+      <HintPath>$(ManagedPath)\Unity.Netcode.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

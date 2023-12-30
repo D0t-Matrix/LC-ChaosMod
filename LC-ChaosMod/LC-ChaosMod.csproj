@@ -3,7 +3,6 @@
     <TargetFramework>net48</TargetFramework>
     <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace("-", "_"))</RootNamespace>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputType>Library</OutputType>
     <LangVersion>9.0</LangVersion>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -26,6 +25,7 @@
 
     <BepInExCorePath>$(GamePath)\BepInEx\core</BepInExCorePath>
     <ManagedPath>$(GamePath)\Lethal Company_Data\Managed</ManagedPath>
+    <AssemblySearchPaths>$(ManagedPath);$(BepInExCorePath);$(AssemblySearchPaths)</AssemblySearchPaths>
   </PropertyGroup>
 
   <ItemGroup>

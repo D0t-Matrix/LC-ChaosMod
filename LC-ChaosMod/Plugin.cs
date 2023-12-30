@@ -10,6 +10,7 @@ namespace LC_ChaosMod
     {
         private readonly Harmony _harmony = new(MyPluginInfo.PLUGIN_GUID);
 
+        internal static RoundManager CurrentRound = RoundManager.Instance;
         internal static ManualLogSource LogSource = BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_NAME);
         internal static PluginConfig? PluginConfig { get; private set; }
 

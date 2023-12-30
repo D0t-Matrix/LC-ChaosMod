@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+
 using HarmonyLib;
 
 namespace LC_ChaosMod
@@ -11,6 +12,7 @@ namespace LC_ChaosMod
         public static ManualLogSource? LogSource;
         private readonly Harmony _harmony = new(MyPluginInfo.PLUGIN_GUID);
 
+        internal static ManualLogSource LogSource = BepInEx.Logging.Logger.CreateLogSource(MyPluginInfo.PLUGIN_NAME);
         //! Plugin startup logic
         public void Awake()
         {
